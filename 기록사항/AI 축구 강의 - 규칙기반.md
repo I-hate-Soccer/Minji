@@ -1,5 +1,6 @@
 ## 영상 링크
 https://www.youtube.com/watch?v=oZEEd_X57mw&list=PLHOyURVffDsDqjkfaA5Yh5qrGWx40nBXa&index=2
+
 ---
 
 - 주니어, 시니어 로봇 존재

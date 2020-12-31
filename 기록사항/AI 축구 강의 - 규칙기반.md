@@ -1,11 +1,12 @@
-- 영상 링크: https://www.youtube.com/watch?v=oZEEd_X57mw&list=PLHOyURVffDsDqjkfaA5Yh5qrGWx40nBXa&index=2
-
+## 영상 링크
+https://www.youtube.com/watch?v=oZEEd_X57mw&list=PLHOyURVffDsDqjkfaA5Yh5qrGWx40nBXa&index=2
+---
 
 - 주니어, 시니어 로봇 존재
 - AI 시뮬레이터(Webots)존재해야함-이를 이용하여 로봇 위치에 대한 좌표 수신받음, 매 시간마다 로봇 컨트롤 변수 되돌려보냄
 - 6개 변수 존재(left_wheel,right_wheel,front_slider,front_slider_height,bottom_slider,dribble_mode) (AI축구 메뉴얼 참조할 것)
 
-
+---
 ## 규칙기반 알고리즘 2가지 파트로 나누어짐: 전략파트, 제어파트
 ### 전략파트: 게임의 좌표값 사용 - 로봇 위치, 공의 포지션이 중요함
 - lower field/opponent filed에 공이 있나 확인, shoot chance 고려..

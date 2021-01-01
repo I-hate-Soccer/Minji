@@ -1,2 +1,2 @@
 # Minji
-ai soccer관련 
+ai soccer관련 찾고 기록  

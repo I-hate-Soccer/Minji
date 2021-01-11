@@ -1,0 +1,2 @@
+- team_a: Red 팀
+- team_b: Blue 팀

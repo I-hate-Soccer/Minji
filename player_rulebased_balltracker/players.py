@@ -106,32 +106,7 @@ class Defender_1:
             shoot = True
             self.flag = 9
         
-        ''' 
-        if helper.ball_is_own_goal(predicted_ball, self.field, self.goal_area):
-            x = -1.5
-            y = 1.5
-            self.flag = 1
-        elif helper.ball_is_own_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -1.5
-            y = 1.5
-            self.flag = 2
-        elif helper.ball_is_own_field(predicted_ball):
-            x = -1.5
-            y = 1.5
-            self.flag = 3
-        elif helper.ball_is_opp_goal(predicted_ball, self.field, self.goal_area):
-            x = -1.5
-            y = 1.5
-            self.flag = 4
-        elif helper.ball_is_opp_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -1.5
-            y = 1.5
-            self.flag = 5
-        else:
-            x = -1.5
-            y = 1.5
-            self.flag = 6
-        '''
+
         left_wheel, right_wheel = self.action.go_to(robot_id, x, y)
         kick_speed, kick_angle = self.action.kick(cross, shoot, quickpass)
         jump_speed = self.action.jump(jump)
@@ -160,33 +135,7 @@ class Defender_2:
         if cur_posture[robot_id][BALL_POSSESSION]: #로봇이 공 점유를 한 경우
             shoot = True
             self.flag = 9
-            
-        '''
-        if helper.ball_is_own_goal(predicted_ball, self.field, self.goal_area):
-            x = -1.5
-            y = -1.5
-            self.flag = 1
-        elif helper.ball_is_own_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -1.5
-            y = -1.5
-            self.flag = 2
-        elif helper.ball_is_own_field(predicted_ball):
-            x = -1.5
-            y = -1.5
-            self.flag = 3
-        elif helper.ball_is_opp_goal(predicted_ball, self.field, self.goal_area):
-            x = -1.5
-            y = -1.5
-            self.flag = 4
-        elif helper.ball_is_opp_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -1.5
-            y = -1.5
-            self.flag = 5
-        else:
-            x = -1.5
-            y = -1.5
-            self.flag = 6
-        '''
+
         left_wheel, right_wheel = self.action.go_to(robot_id, x, y)
         kick_speed, kick_angle = self.action.kick(cross, shoot, quickpass)
         jump_speed = self.action.jump(jump)
@@ -208,40 +157,14 @@ class Forward_1:
     def move(self, robot_id, idx, idx_opp, defense_angle, attack_angle, cur_posture, cur_posture_opp, previous_ball, cur_ball, predicted_ball,  cross=False, shoot=False, quickpass=False, jump=False, dribble=False):
         
         self.action.update_state(cur_posture, cur_ball)
-        '''
+
         x = cur_ball[X]
         y = cur_ball[Y]
         self.flag = 8
         if cur_posture[robot_id][BALL_POSSESSION]: #로봇이 공 점유를 한 경우
             shoot = True
             self.flag = 9
-            
-            
-        '''
-        if helper.ball_is_own_goal(predicted_ball, self.field, self.goal_area):
-            x = -0.5
-            y = 1
-            self.flag = 1
-        elif helper.ball_is_own_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -0.5
-            y = 1
-            self.flag = 2
-        elif helper.ball_is_own_field(predicted_ball):
-            x = -0.5
-            y = 1
-            self.flag = 3
-        elif helper.ball_is_opp_goal(predicted_ball, self.field, self.goal_area):
-            x = -0.5
-            y = 1
-            self.flag = 4
-        elif helper.ball_is_opp_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -0.5
-            y = 1
-            self.flag = 5
-        else:
-            x = -0.5
-            y = 1
-            self.flag = 6
+
         
         left_wheel, right_wheel = self.action.go_to(robot_id, x, y)
         kick_speed, kick_angle = self.action.kick(cross, shoot, quickpass)
@@ -273,53 +196,7 @@ class Forward_2:
             
             self.flag = 9
             
-            
-        '''
-        #1
-        if helper.ball_is_own_goal(predicted_ball, self.field, self.goal_area):
-            x = -0.5
-            y = -1
-            self.flag = 1
-        
-        #2
-        elif helper.ball_is_own_penalty(predicted_ball, self.field, self.penalty_area):
-            x = -0.5
-            y = -1
-            self.flag = 2
-        
-        #3
-        elif helper.ball_is_own_field(predicted_ball):
-            x = cur_ball[X]
-            y = cur_ball[Y]
-            self.flag = 3
 
-        #4
-        elif helper.ball_is_opp_goal(predicted_ball, self.field, self.goal_area):
-            x = cur_ball[X]
-            y = cur_ball[Y]
-            self.flag = 4
-            if cur_posture[robot_id][BALL_POSSESSION]:
-                quickpass = True
-                self.flag = 5
-                
-        #5
-        elif helper.ball_is_opp_penalty(predicted_ball, self.field, self.penalty_area):
-            x = cur_ball[X]
-            y = cur_ball[Y]
-            self.flag = 6
-            if cur_posture[robot_id][BALL_POSSESSION]:
-                cross = True
-                self.flag = 7
-                
-        #6        
-        else:
-            x = cur_ball[X]
-            y = cur_ball[Y]
-            self.flag = 8
-            if cur_posture[robot_id][BALL_POSSESSION]: #로봇이 공 점유를 한 경우
-                shoot = True
-                self.flag = 9
-        '''
         left_wheel, right_wheel = self.action.go_to(robot_id, x, y)
         kick_speed, kick_angle = self.action.kick(cross, shoot, quickpass)
         jump_speed = self.action.jump(jump)

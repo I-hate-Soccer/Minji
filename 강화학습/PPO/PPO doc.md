@@ -3,3 +3,6 @@
 
 - PPO1 PPO2
   - https://stable-baselines.readthedocs.io/en/master/modules/ppo2.html
+  
+- PPO
+  - https://chris-chris.gitbook.io/sc2-korean-level/proximal-policy-optimization-review

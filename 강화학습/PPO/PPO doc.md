@@ -11,3 +11,7 @@
 - TRPO
   - https://reinforcement-learning-kr.github.io/2018/06/24/5_trpo/
   - https://www.slideshare.net/WoongwonLee/trpo-87165690 (X)
+
+- Policy Based
+  - https://dreamgonfly.github.io/blog/rl-taxonomy/
+  - https://cding.tistory.com/72
